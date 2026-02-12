@@ -18,7 +18,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
 
         body {
-            background-color: var(--bg);
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             color: var(--text-main);
             font-family: 'Plus Jakarta Sans', sans-serif;
             display: flex;
@@ -33,12 +33,18 @@
             width: 100%;
             max-width: 380px; /* Mobile friendly width */
             padding: 30px 24px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
-            border: 1px solid rgba(0,0,0,0.06);
+            border: 1px solid var(--brand-blue); /* ನೀಲಿ ಬಾರ್ಡರ್ */
+            bbox-shadow: 0 10px 30px rgba(0, 102, 255, 0.08); 
+            border: 1px solid rgba(0, 102, 255, 0.1); /* ಹಗುರವಾದ ನೀಲಿ ಬಾರ್ಡರ್ */
             text-align: center;
             position: relative;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
+
+          .card:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+       }
 
         .brand { font-weight: 800; font-size: 0.9rem; color: var(--text-grey); letter-spacing: 1px; margin-bottom: 20px; display: block; }
 
@@ -151,7 +157,7 @@
         <div id="revealed-content">
             <div class="discount-badge">SPECIAL OFFER APPLIED (Ms.Nidhi Jennier)</div>
             <p class="price-label" style="text-decoration: line-through;">Was ₹54,900</p>
-            <h2 class="offer-price">₹49,999/-</h2>
+            <h2 class="offer-price">₹50,000/-</h2>
             <p class="validity">This Promocode is Valid upto 13th Feb 11:00am (Ai Expert Course)</p>
             
             <a href="https://pages.razorpay.com/pl_L7Xd7FfmGqBdDk/view" class="btn-pay">Complete Enrollment</a>
